@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كلمات متقاطعة إسلامية</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Amiri", serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            min-height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* الشعار الإسلامي */
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #D4AC0D, #F7DC6F);
+            border-radius: 50%;
+            border: 4px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .logo-icon {
+            font-size: 50px;
+            color: #1e3c72;
+        }
+
+        /* العنوان */
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #F7DC6F;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #bbdefb;
+            margin-bottom: 40px;
+        }
+
+        /* زر ابدأ */
+        .start-btn {
+            background: linear-gradient(135deg, #D4AC0D, #F7DC6F);
+            border: none;
+            border-radius: 25px;
+            padding: 18px 40px;
+            color: #1e3c72;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            margin-bottom: 40px;
+            width: 250px;
+        }
+
+        .start-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        /* إحصائيات */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #D4AC0D;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-icon {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .stat-text {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* آية قرآنية */
+        .quote {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #D4AC0D;
+            border-radius: 15px;
+            padding: 15px;
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .quote-text {
+            font-size: 16px;
+            color: #F7DC6F;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .quote-source {
+            font-size: 12px;
+            color: #bbdefb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- الشعار -->
+        <div class="logo">
+            <div class="logo-icon">🕌</div>
+        </div>
+
+        <!-- العنوان -->
+        <h1 class="title">كلمات متقاطعة إسلامية</h1>
+        <p class="subtitle">رحلة في عالم المعرفة الإسلامية</p>
+
+        <!-- زر ابدأ -->
+        <button class="start-btn" onclick="startGame()">
+            🚀 ابدأ الرحلة
+        </button>
+
+        <!-- الإحصائيات -->
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-icon">👑</div>
+                <div class="stat-text" id="highScore">أعلى نقاط: 0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📚</div>
+                <div class="stat-text" id="completedLevels">المكتمل: 0/12</div>
+            </div>
+        </div>
+
+        <!-- آية قرآنية -->
+        <div class="quote">
+            <div class="quote-text">وَقُل رَّبِّ زِدْنِي عِلْمًا</div>
+            <div class="quote-source">سورة طه - الآية 114</div>
+        </div>
+    </div>
+
+    <script>
+        function startGame() {
+            if (window.Android) {
+                Android.startGame();
+            } else {
+                window.location.href = "levels.html";
+            }
+        }
+
+        function loadStats() {
+            if (window.Android) {
+                const highScore = Android.getHighScore();
+                const completedLevels = Android.getCompletedLevels();
+                
+                document.getElementById('highScore').textContent = `أعلى نقاط: ${highScore}`;
+                document.getElementById('completedLevels').textContent = `المكتمل: ${completedLevels}/12`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadStats);
+    </script>
+</body>
+</html>

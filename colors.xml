@@ -1,0 +1,20 @@
+<resources>
+    <color name="colorPrimary">#1A5276</color>
+    <color name="colorPrimaryDark">#154360</color>
+    <color name="colorAccent">#D4AC0D</color>
+    <color name="backgroundColor">#F8F9F9</color>
+    <color name="textColor">#2C3E50</color>
+    <color name="buttonColor">#3498DB</color>
+    <color name="goldColor">#D4AC0D</color>
+    <color name="greenColor">#27AE60</color>
+    <color name="white">#FFFFFF</color>
+    <color name="lightGold">#F7DC6F</color>
+    
+    <!-- الألوان الجديدة -->
+    <color name="gold_light">#F7DC6F</color>
+    <color name="gold_dark">#D4AC0D</color>
+    <color name="bg_gold">#FFFDE7</color>
+    <color name="islamic_blue">#1A5276</color>
+    <color name="button_gold">#D4AC0D</color>
+    <color name="text_dark">#2C3E50</color>
+</resources>

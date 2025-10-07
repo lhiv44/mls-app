@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المستويات الإسلامية</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Amiri", serif;
+        }
+        
+ body {
+    background: linear-gradient(135deg, #1a2a6c, #2a5298);
+    min-height: 100vh;
+    color: #3e2f1d;
+}
+
+        /* الهيدر العلوي */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #5a4632, #2a5298);
+            color: #fff;
+            padding: 12px 16px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 2px 10px rgba(90, 70, 50, 0.3);
+        }
+        
+        .back-btn {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* العنوان والوصف */
+        .title-section {
+            text-align: center;
+            margin: 20px 10px;
+        }
+        
+        .title-section h2 {
+            margin: 8px 0;
+            font-size: 24px;
+            color: #d2b47c;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .subtitle {
+            display: inline-block;
+            background: linear-gradient(135deg, #fff8e1, #f7e8c8);
+            border: 1px solid #e0c97f;
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 14px;
+            color: #5d4a2e;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* شبكة المستويات */
+        .levels-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 12px;
+        }
+
+        /* البطاقات مع الزخارف الإسلامية */
+        .level-card {
+            background: linear-gradient(145deg, #f1e0b8, #e8d4a8);
+            border: 5px solid #d2b47c;
+            border-radius: 15px;
+            padding: 15px 10px;
+            text-align: center;
+            color: #3e2f1d;
+            font-weight: bold;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+            position: relative;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+        
+        /* الزخرفة الإسلامية في الخلفية */
+        .level-card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 500%;
+            height: 500%;
+            background: radial-gradient(circle, rgba(210, 180, 124, 0.1) 0%, transparent 200%);
+            transform: rotate(45deg);
+            pointer-events: none;
+        }
+        
+        /* الزخرفة الإسلامية في الزوايا */
+        .level-card::after {
+            content: "✦";
+            position: absolute;
+            top: 100px;
+            right: 100px;
+            font-size: 12px;
+            color: #d2b47c;
+            opacity: 10.6;
+        }
+        
+        .level-card .corner-decoration {
+            position: absolute;
+            bottom: 30px;
+            left: 50px;
+            font-size: 22px;
+            color: #d2b47c;
+            opacity: 10.6;
+        }
+        
+        /* تأثيرات التمرير */
+        .level-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            background: linear-gradient(145deg, #f7e8c8, #f1e0b8);
+            border-color: #c19a5b;
+        }
+        
+        .level-card.locked {
+            background: linear-gradient(145deg, #e0d6c0, #d4c9b1);
+            border-color: #b8a98a;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        
+        .level-card.locked:hover {
+            transform: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            background: linear-gradient(145deg, #e0d6c0, #d4c9b1);
+        }
+        
+        /* رقم المستوى مع تصميم إسلامي */
+        .level-number {
+            font-size: 24px;
+            margin-bottom: 8px;
+            color: #5a4632;
+            background: linear-gradient(135deg, #d2b47c, #c19a5b);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            border: 2px solid #8b6b46;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .level-card.locked .level-number {
+            background: linear-gradient(135deg, #b8a98a, #a8997a);
+            border-color: #8a7c5f;
+            color: #666;
+        }
+        
+        /* عنوان المستوى */
+        .level-title {
+            font-size: 14px;
+            margin-bottom: 10px;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* شارة الإكمال مع تصميم إسلامي */
+        .badge {
+            margin-top: 8px;
+            font-size: 14px;
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #27ae60, #229954);
+            color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .badge.blue { 
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+        
+        .badge.locked { 
+            background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+        }
+        
+        /* نقاط زخرفية إسلامية */
+        .islamic-dots {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .islamic-dots .dot {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #d2b47c;
+            border-radius: 50%;
+            opacity: 0.4;
+        }
+        
+        .islamic-dots .dot-1 { top: 15px; left: 15px; }
+        .islamic-dots .dot-2 { top: 15px; right: 15px; }
+        .islamic-dots .dot-3 { bottom: 15px; left: 15px; }
+        .islamic-dots .dot-4 { bottom: 15px; right: 15px; }
+
+        /* زر إعادة التعيين */
+        .reset-section {
+            text-align: center;
+            margin: 20px 10px;
+            padding: 10px;
+        }
+        
+        .reset-btn {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            border: none;
+            border-radius: 25px;
+            padding: 12px 25px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .reset-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        /* معلومات التصحيح */
+        .debug-info {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #d2b47c;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            font-size: 12px;
+            color: #5a4632;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <div class="header">
+        <button class="back-btn" onclick="goBack()">←</button>
+        <span>المستويات الإسلامية</span>
+        <span>المستويات: 12</span>
+    </div>
+
+    <!-- العنوان والوصف -->
+    <div class="title-section">
+        <h2>المستويات الإسلامية</h2>
+        <div class="subtitle">اختر مستوى لتبدأ رحلتك في العلم</div>
+    </div>
+
+    <!-- معلومات التصحيح -->
+    <div class="debug-info" id="debugInfo">
+        جاري تحميل المستويات...
+    </div>
+
+    <!-- شبكة البطاقات -->
+    <div class="levels-grid" id="levelsGrid">
+        <!-- المستويات سيتم إضافتها بالجافاسكربت -->
+    </div>
+
+    <!-- زر إعادة التعيين -->
+    <div class="reset-section">
+        <button class="reset-btn" onclick="resetGame()">
+            🔄 إعادة تعيين اللعبة (للتجربة)
+        </button>
+    </div>
+
+    <script>
+        const levelsData = [
+            { title: "الأنبياء", number: 1 },
+            { title: "القرآن", number: 2 },
+            { title: "الفقه", number: 3 },
+            { title: "السيرة", number: 4 },
+            { title: "الأخلاق", number: 5 },
+            { title: "التاريخ", number: 6 },
+            { title: "العقيدة", number: 7 },
+            { title: "العبادات", number: 8 },
+            { title: "المعجزات", number: 9 },
+            { title: "الصحابة", number: 10 },
+            { title: "الأحداث", number: 11 },
+            { title: "الختام", number: 12 }
+        ];
+
+        function startLevel(level) {
+            console.log("محاولة بدء المستوى: " + level);
+            if (window.Android) {
+                Android.startLevel(level);
+            } else {
+                // للتجربة في المتصفح
+                console.log("بدء المستوى: " + level);
+                window.location.href = "game.html?level=" + level;
+            }
+        }
+
+        function loadLevels() {
+            const levelsGrid = document.getElementById('levelsGrid');
+            const debugInfo = document.getElementById('debugInfo');
+            
+            let maxUnlocked = 1;
+            if (window.Android) {
+                maxUnlocked = Android.getMaxUnlockedLevel();
+            }
+            
+            debugInfo.innerHTML = `أقصى مستوى مفتوح: ${maxUnlocked} | إجمالي المستويات: 12`;
+            console.log("أقصى مستوى مفتوح: " + maxUnlocked);
+
+            levelsGrid.innerHTML = '';
+            
+            levelsData.forEach((level, index) => {
+                const levelNumber = index + 1;
+                const isLocked = levelNumber > maxUnlocked;
+                const isCompleted = window.Android ? Android.isLevelCompleted(levelNumber) : false;
+                
+                console.log(`المستوى ${levelNumber}: مقفل=${isLocked}, مكتمل=${isCompleted}`);
+                
+                const levelCard = document.createElement('div');
+                levelCard.className = `level-card ${isLocked ? 'locked' : ''}`;
+                levelCard.innerHTML = `
+                    <div class="islamic-dots">
+                        <div class="dot dot-1"></div>
+                        <div class="dot dot-2"></div>
+                        <div class="dot dot-3"></div>
+                        <div class="dot dot-4"></div>
+                    </div>
+                    <div class="level-number">${level.number}</div>
+                    <div class="level-title">${level.title}</div>
+                    <div class="badge ${isCompleted ? 'blue' : (isLocked ? 'locked' : '')}">
+                        ${isCompleted ? '✓' : (isLocked ? '🔒' : '○')}
+                    </div>
+                    <div class="corner-decoration">❁</div>
+                `;
+                
+                if (!isLocked) {
+                    levelCard.onclick = () => startLevel(levelNumber);
+                } else {
+                    levelCard.onclick = () => {
+                        alert(`المستوى ${levelNumber} مقفل! أكمل المستوى ${levelNumber - 1} أولاً.`);
+                    };
+                }
+                
+                levelsGrid.appendChild(levelCard);
+            });
+        }
+
+        function resetGame() {
+            console.log("إعادة تعيين اللعبة...");
+            if (window.Android && Android.resetGame) {
+                Android.resetGame();
+            } else {
+                if (confirm("هل تريد إعادة تعيين اللعبة؟ سيتم حذف جميع التقدم.")) {
+                    localStorage.clear();
+                    location.reload();
+                }
+            }
+        }
+
+        function goBack() {
+            if (window.Android) {
+                Android.goBack();
+            } else {
+                window.history.back();
+            }
+        }
+
+        // تحديث الصفحة كل 2 ثانية للتحقق من التغييرات
+        function autoRefresh() {
+            setTimeout(() => {
+                loadLevels();
+                autoRefresh();
+            }, 2000);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadLevels();
+            // autoRefresh(); // يمكن تفعيل هذا السطر إذا أردت التحديث التلقائي
+        });
+    </script>
+</body>
+</html>

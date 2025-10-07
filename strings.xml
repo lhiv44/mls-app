@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">كلمات متقاطعة إسلامية</string>
+    <string name="start_game">ابدأ اللعبة</string>
+    <string name="levels">المستويات</string>
+    <string name="score">النقاط: %d</string>
+    <string name="level">المستوى %d</string>
+    <string name="check_answer">تصحيح</string>
+    <string name="hint">تلميح (-3)</string>
+    <string name="help_letters">حرفين</string>
+    <string name="back">←</string>
+    <string name="high_score">أعلى نقاط: %d</string>
+    <string name="choose_level">اختر المستوى</string>
+    <string name="question">السؤال</string>
+    <string name="correct_answer">إجابة صحيحة! +10 نقاط</string>
+    <string name="wrong_answer">إجابة خاطئة! -5 نقاط</string>
+    <string name="not_enough_points">نقاط غير كافية</string>
+</resources>

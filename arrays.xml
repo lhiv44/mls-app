@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- المستوى 1 - الأنبياء -->
+    <string-array name="level1_questions">
+        <item>من هو أول نبي في الإسلام؟</item>
+        <item>من هو النبي الذي سمي بخليل الله؟</item>
+        <item>من هو النبي الذي بنى السفينة؟</item>
+        <item>من هو النبي الذي لقب بكليم الله؟</item>
+        <item>من هو النبي الذي ألقى في النار فجعلها الله برداً وسلاماً؟</item>
+        <item>من هو النبي الذي سمي بأبي الأنبياء؟</item>
+        <item>من هو النبي الذي فلق البحر؟</item>
+        <item>من هو النبي الذي عاش في بطن الحوت؟</item>
+        <item>من هو النبي الذي كان يصنع من الطين طيراً؟</item>
+        <item>من هو خاتم الأنبياء والمرسلين؟</item>
+    </string-array>
+    
+    <string-array name="level1_answers">
+        <item>آدم</item>
+        <item>إبراهيم</item>
+        <item>نوح</item>
+        <item>موسى</item>
+        <item>إبراهيم</item>
+        <item>إبراهيم</item>
+        <item>موسى</item>
+        <item>يونس</item>
+        <item>عيسى</item>
+        <item>محمد</item>
+    </string-array>
+
+    <!-- المستوى 2 - القرآن -->
+    <string-array name="level2_questions">
+        <item>ما هي أول سورة في القرآن؟</item>
+        <item>ما هي أطول سورة في القرآن؟</item>
+        <item>ما هي أقصر سورة في القرآن؟</item>
+        <item>ما هي السورة التي تسمى قلب القرآن؟</item>
+        <item>ما هي السورة التي تسمى عروس القرآن؟</item>
+        <item>ما هي السورة التي تبدأ بالحمد لله؟</item>
+        <item>ما هي السورة التي لم تبدأ بالبسملة؟</item>
+        <item>ما هي السورة التي ذكرت فيها البسملة مرتين؟</item>
+        <item>ما هي السورة التي تسمى سورة النبي؟</item>
+        <item>ما هي السورة التي تسمى المنجية؟</item>
+    </string-array>
+    
+    <string-array name="level2_answers">
+        <item>الفاتحة</item>
+        <item>البقرة</item>
+        <item>الكوثر</item>
+        <item>يس</item>
+        <item>الرحمن</item>
+        <item>الفاتحة</item>
+        <item>التوبة</item>
+        <item>النمل</item>
+        <item>التحريم</item>
+        <item>الملك</item>
+    </string-array>
+
+    <!-- المستوى 3 - الفقه -->
+    <string-array name="level3_questions">
+        <item>كم عدد أركان الإسلام؟</item>
+        <item>كم عدد أركان الإيمان؟</item>
+        <item>ما هو أول ركن من أركان الإسلام؟</item>
+        <item>ما هو ثاني ركن من أركان الإسلام؟</item>
+        <item>كم عدد الركعات في صلاة الظهر؟</item>
+        <item>كم عدد الركعات في صلاة المغرب؟</item>
+        <item>ما هي شروط الصلاة؟</item>
+        <item>ما هي مبطلات الصلاة؟</item>
+        <item>ما هو حكم الصلاة؟</item>
+        <item>ما هو وقت صلاة الفجر؟</item>
+    </string-array>
+    
+    <string-array name="level3_answers">
+        <item>خمسة</item>
+        <item>ستة</item>
+        <item>الشهادتان</item>
+        <item>الصلاة</item>
+        <item>أربع</item>
+        <item>ثلاث</item>
+        <item>الطهارة</item>
+        <item>الكلام</item>
+        <item>الفرض</item>
+        <item>الصبح</item>
+    </string-array>
+
+    <!-- المستوى 4 - السيرة -->
+    <string-array name="level4_questions">
+        <item>في أي عام ولد النبي محمد؟</item>
+        <item>ما هي معجزة النبي محمد الخالدة؟</item>
+        <item>من هي أول زوجة للنبي محمد؟</item>
+        <item>من هو أول من آمن بالنبي من الصبيان؟</item>
+        <item>ما اسم الغار الذي كان يتعبد فيه النبي؟</item>
+        <item>كم كان عمر النبي عندما بُعث؟</item>
+        <item>ما هي الهجرة؟</item>
+        <item>إلى أي مدينة هاجر النبي؟</item>
+        <item>ما هي غزوة بدر؟</item>
+        <item>كم استمرت دعوة النبي في مكة؟</item>
+    </string-array>
+    
+    <string-array name="level4_answers">
+        <item>عامالفيل</item>
+        <item>القرآن</item>
+        <item>خديجة</item>
+        <item>علي</item>
+        <item>حراء</item>
+        <item>أربعون</item>
+        <item>الانتقال</item>
+        <item>المدينة</item>
+        <item>معركة</item>
+        <item>ثلاثة عشر</item>
+    </string-array>
+
+    <!-- المستوى 5 - الأخلاق -->
+    <string-array name="level5_questions">
+        <item>ما هو خلق الإسلام؟</item>
+        <item>ما هو أفضل الأخلاق؟</item>
+        <item>ماذا يعني الصدق؟</item>
+        <item>ما ضد الصدق؟</item>
+        <item>ما هو خلق الكرم؟</item>
+        <item>ما هو خلق التواضع؟</item>
+        <item>ما هو خلق الصبر؟</item>
+        <item>ما هو خلق الأمانة؟</item>
+        <item>ما هو خلق الحياء؟</item>
+        <item>ما هو خلق الوفاء؟</item>
+    </string-array>
+    
+    <string-array name="level5_answers">
+        <item>الأخلاق</item>
+        <item>الصدق</item>
+        <item>الصدق</item>
+        <item>الكذب</item>
+        <item>العطاء</item>
+        <item>التواضع</item>
+        <item>الصبر</item>
+        <item>الأمانة</item>
+        <item>الحياء</item>
+        <item>الوفاء</item>
+    </string-array>
+
+    <!-- المستوى 6 - التاريخ -->
+    <string-array name="level6_questions">
+        <item>من هو أول خليفة للمسلمين؟</item>
+        <item>من هو ثاني الخلفاء الراشدين؟</item>
+        <item>من هو الخليفة الذي أسس الدواوين؟</item>
+        <item>من هو قائد معركة اليرموك؟</item>
+        <item>متى كانت غزوة الأحزاب؟</item>
+        <item>من هو باني المسجد الأقصى؟</item>
+        <item>من هو فاتح الأندلس؟</item>
+        <item>من هو قائد معركة نهاوند؟</item>
+        <item>من هو مؤسس الدولة الأموية؟</item>
+        <item>من هو قائد معركة القادسية؟</item>
+    </string-array>
+    
+    <string-array name="level6_answers">
+        <item>أبوبكر</item>
+        <item>عمر</item>
+        <item>عمر</item>
+        <item>خالد</item>
+        <item>خمسة</item>
+        <item>سليمان</item>
+        <item>طارق</item>
+        <item>النعمان</item>
+        <item>معاوية</item>
+        <item>سعد</item>
+    </string-array>
+
+    <!-- المستوى 7 - العقيدة -->
+    <string-array name="level7_questions">
+        <item>ما هو أول واجب على المكلف؟</item>
+        <item>كم عدد أركان الإيمان؟</item>
+        <item>ما هو الركن الأول من أركان الإيمان؟</item>
+        <item>ما هو الركن الثاني من أركان الإيمان؟</item>
+        <item>ما هو الركن الثالث من أركان الإيمان؟</item>
+        <item>ما هو الركن الرابع من أركان الإيمان؟</item>
+        <item>ما هو الركن الخامس من أركان الإيمان؟</item>
+        <item>ما هو الركن السادس من أركان الإيمان؟</item>
+        <item>ما معنى التوحيد؟</item>
+        <item>ما هي أنواع التوحيد؟</item>
+    </string-array>
+    
+    <string-array name="level7_answers">
+        <item>التوحيد</item>
+        <item>ستة</item>
+        <item>الإيمان</item>
+        <item>الملائكة</item>
+        <item>الكتب</item>
+        <item>الرسل</item>
+        <item>اليوم</item>
+        <item>القدر</item>
+        <item>التوحيد</item>
+        <item>ثلاثة</item>
+    </string-array>
+
+    <!-- المستوى 8 - العبادات -->
+    <string-array name="level8_questions">
+        <item>كم عدد الصلوات المفروضة؟</item>
+        <item>ما هي أول صلاة فرضت؟</item>
+        <item>كم عدد ركعات صلاة الفجر؟</item>
+        <item>كم عدد ركعات صلاة الظهر؟</item>
+        <item>كم عدد ركعات صلاة العصر؟</item>
+        <item>كم عدد ركعات صلاة المغرب؟</item>
+        <item>كم عدد ركعات صلاة العشاء؟</item>
+        <item>ما هي شروط الصيام؟</item>
+        <item>كم عدد أركان الحج؟</item>
+        <item>ما هو الركن الأول من أركان الحج؟</item>
+    </string-array>
+    
+    <string-array name="level8_answers">
+        <item>خمس</item>
+        <item>الظهر</item>
+        <item>ركعتان</item>
+        <item>أربع</item>
+        <item>أربع</item>
+        <item>ثلاث</item>
+        <item>أربع</item>
+        <item>الإسلام</item>
+        <item>أربعة</item>
+        <item>الإحرام</item>
+    </string-array>
+
+    <!-- المستوى 9 - المعجزات -->
+    <string-array name="level9_questions">
+        <item>ما هي معجزة النبي موسى؟</item>
+        <item>ما هي معجزة النبي عيسى؟</item>
+        <item>ما هي معجزة النبي صالح؟</item>
+        <item>ما هي معجزة النبي إبراهيم؟</item>
+        <item>ما هي معجزة النبي سليمان؟</item>
+        <item>ما هي معجزة النبي يونس؟</item>
+        <item>ما هي معجزة النبي أيوب؟</item>
+        <item>ما هي معجزة النبي داود؟</item>
+        <item>ما هي معجزة النبي يوسف؟</item>
+        <item>ما هي معجزة النبي محمد؟</item>
+    </string-array>
+    
+    <string-array name="level9_answers">
+        <item>العصا</item>
+        <item>إحياء</item>
+        <item>الناقة</item>
+        <item>النار</item>
+        <item>الجن</item>
+        <item>الحوت</item>
+        <item>الصبر</item>
+        <item>الحديد</item>
+        <item>التأويل</item>
+        <item>القرآن</item>
+    </string-array>
+
+    <!-- المستوى 10 - الصحابة -->
+    <string-array name="level10_questions">
+        <item>من هو أول من أسلم من الرجال؟</item>
+        <item>من هو أول من أسلم من النساء؟</item>
+        <item>من هو أول من أسلم من الصبيان؟</item>
+        <item>من هو الصديق؟</item>
+        <item>من هو الفاروق؟</item>
+        <item>من هو ذو النورين؟</item>
+        <item>من هو سيف الله المسلول؟</item>
+        <item>من هو حبر الأمة؟</item>
+        <item>من هو ترجمان القرآن؟</item>
+        <item>من هو أسد الله؟</item>
+    </string-array>
+    
+    <string-array name="level10_answers">
+        <item>أبوبكر</item>
+        <item>خديجة</item>
+        <item>علي</item>
+        <item>أبوبكر</item>
+        <item>عمر</item>
+        <item>عثمان</item>
+        <item>خالد</item>
+        <item>عبدالله</item>
+        <item>ابنعباس</item>
+        <item>حمزة</item>
+    </string-array>
+
+    <!-- المستوى 11 - الأحداث -->
+    <string-array name="level11_questions">
+        <item>متى كانت غزوة بدر؟</item>
+        <item>متى كانت غزوة أحد؟</item>
+        <item>متى كانت غزوة الخندق؟</item>
+        <item>متى كانت صلح الحديبية؟</item>
+        <item>متى كانت فتح مكة؟</item>
+        <item>متى كانت حجة الوداع؟</item>
+        <item>متى كانت معركة اليرموك؟</item>
+        <item>متى كانت معركة القادسية؟</item>
+        <item>متى كانت معركة نهاوند؟</item>
+        <item>متى كانت معركة بلاط الشهداء؟</item>
+    </string-array>
+    
+    <string-array name="level11_answers">
+        <item>الثانية</item>
+        <item>الثالثة</item>
+        <item>الخامسة</item>
+        <item>السادسة</item>
+        <item>الثامنة</item>
+        <item>العاشرة</item>
+        <item>الخامسة</item>
+        <item>الرابعة</item>
+        <item>الخامسة</item>
+        <item>السادسة</item>
+    </string-array>
+
+    <!-- المستوى 12 - الختام -->
+    <string-array name="level12_questions">
+        <item>ما هو آخر كتاب أنزله الله؟</item>
+        <item>من هو آخر نبي؟</item>
+        <item>ما هي آخر سورة نزلت؟</item>
+        <item>ما هي آخر آية نزلت؟</item>
+        <item>من هو آخر من مات من الصحابة؟</item>
+        <item>ما هي آخر غزوة للرسول؟</item>
+        <item>من هو آخر الخلفاء الراشدين؟</item>
+        <item>ما هو آخر أركان الإسلام؟</item>
+        <item>ما هو آخر أركان الإيمان؟</item>
+        <item>ما هو آخر دعاء النبي؟</item>
+    </string-array>
+    
+    <string-array name="level12_answers">
+        <item>القرآن</item>
+        <item>محمد</item>
+        <item>النصر</item>
+        <item>الربا</item>
+        <item>أنس</item>
+        <item>تبوك</item>
+        <item>علي</item>
+        <item>الحج</item>
+        <item>القدر</item>
+        <item>الصلاة</item>
+    </string-array>
+</resources>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gold"
+    android:padding="30dp">
+
+    <!-- الشعار الإسلامي الدائري -->
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/gold_circle"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/tvIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🕌"
+            android:textSize="50sp"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- العنوان الرئيسي -->
+    <TextView
+        android:id="@+id/tvAppTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="كلمات متقاطعة إسلامية"
+        android:textColor="@color/gold_dark"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_below="@id/tvIcon"
+        android:layout_marginTop="30dp" />
+
+    <!-- الوصف -->
+    <TextView
+        android:id="@+id/tvAppDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="رحلة في عالم المعرفة الإسلامية"
+        android:textColor="@color/text_dark"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_below="@id/tvAppTitle"
+        android:layout_marginTop="10dp" />
+
+    <!-- زر ابدأ الرئيسي -->
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="300dp"
+        android:layout_height="90dp"
+        android:text="ابدأ الرحلة"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:background="@drawable/islamic_gold_button"
+        android:textColor="@color/white"
+        android:layout_below="@id/tvAppDescription"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+
+    <!-- منطقة الإحصائيات -->
+    <LinearLayout
+        android:id="@+id/statsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/btnStart"
+        android:layout_marginTop="40dp"
+        android:padding="10dp">
+
+        <!-- بطاقة أعلى نقاط -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/level_frame"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👑"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvHighScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="أعلى نقاط: 0"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+        <!-- بطاقة المستويات المكتملة -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@color/islamic_blue"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📚"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvCompletedLevels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="المكتمل: 0/12"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- آية قرآنية -->
+    <TextView
+        android:id="@+id/tvQuote"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:text="وَقُل رَّبِّ زِدْنِي عِلْمًا"
+        android:textColor="@color/gold_dark"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:background="@color/islamic_blue"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:padding="15dp" />
+
+</RelativeLayout>
