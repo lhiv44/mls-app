@@ -32,3 +32,4 @@ workflows:
         notify:
           success: true
           failure: true
+
