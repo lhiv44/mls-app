@@ -1,10 +1,9 @@
+
 workflows:
   islamic-crossword-android:
     name: Islamic Crossword Android
     environment:
       android_sdk: "33"
-      groups:
-        - android_credentials
     triggering:
       events:
         - push
@@ -14,17 +13,13 @@ workflows:
     scripts:
       - name: Set up Android SDK
         script: |
-          sdkmanager "platforms;android-30" "build-tools;30.0.3"
+          yes | sdkmanager "platforms;android-30" "build-tools;30.0.3"
       - name: Build Debug APK
         script: |
           chmod +x ./gradlew
           ./gradlew assembleDebug
-      - name: Build Release APK
-        script: |
-          ./gradlew assembleRelease
     artifacts:
       - app/build/outputs/apk/debug/app-debug.apk
-      - app/build/outputs/apk/release/app-release-unsigned.apk
     publishing:
       email:
         recipients:
@@ -32,4 +27,3 @@ workflows:
         notify:
           success: true
           failure: true
-
